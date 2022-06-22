@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  color: lavender;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+}
+
+#container {
+  border: 2px solid;
+  background-color: gray;
+  padding: 50px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+h1,
+h2,
+h3 {
+  color: darkslategray;
+}
+
+a:link {
+  color: darkgreen;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+a:focus {
+  color: darkgreen;
+  text-decoration: none;
+}
+
+a:visited {
+  color: yellowgreen;
+  text-decoration: none;
+}
+
+a:visited:hover {
+  color: black;
+  text-decoration: underline;
+}
