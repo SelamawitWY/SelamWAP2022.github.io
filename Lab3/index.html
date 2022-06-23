@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="./shopping.css" type="text/css" rel="stylesheet" />
+
+    <title>Lab 3</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="home pt-3">
+        <a href="../index.html"> Home </a>
+      </div>
+      <header>
+        <img src="../asset/images/logo.png" width="50px" alt="logo" />
+        <h1>Welcome, Selamawit</h1>
+        <button id="logoutButton">Logout</button>
+      </header>
+
+      <section style="padding: 32px">
+        <h2 class="mb-4">Product list</h2>
+        <table
+          class="table table-bordered"
+          style="margin-top: 6px; color: lavender; text-align: center"
+        >
+          <thead class="myHead">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Stock</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Node.js</td>
+              <td>9.99</td>
+              <td>8</td>
+              <td>
+                <button class="actionButton mr-4">
+                  <img src="../asset/images/cart.svg" />
+                </button>
+                <button class="actionButton">
+                  <img src="../asset/images/cartPlus.svg" />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>React</td>
+              <td>19.99</td>
+              <td>13</td>
+              <td>
+                <button class="actionButton mr-4">
+                  <img src="../asset/images/cart.svg" />
+                </button>
+                <button class="actionButton">
+                  <img src="../asset/images/cartPlus.svg" />
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Angular</td>
+              <td>29.99</td>
+              <td>12</td>
+              <td>
+                <button class="actionButton mr-4">
+                  <img src="../asset/images/cart.svg" />
+                </button>
+                <button class="actionButton">
+                  <img src="../asset/images/cartPlus.svg" />
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section style="padding: 32px; padding-top: 0px; padding-bottom: 9px">
+        <h2 class="my-4">Your shopping cart</h2>
+        <table
+          class="table table-bordered"
+          style="margin-top: 6px; color: lavender; text-align: center"
+        >
+          <thead class="myHead">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Total</th>
+              <th scope="col">Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Node.js</td>
+              <td>9.99</td>
+              <td>9.99</td>
+              <td>
+                <button class="actionButton">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="darkred"
+                    class="bi bi-dash"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </button>
+                <input
+                  class="mx-2 quantity"
+                  value="1"
+                  id="quantity"
+                  readonly
+                  name="quantity"
+                  min="1"
+                  style="width: 48px; text-align: center"
+                />
+                <button class="actionButton">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="darkgreen"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>React</td>
+              <td>19.99</td>
+              <td>19.99</td>
+              <td>
+                <button class="actionButton">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="darkred"
+                    class="bi bi-dash"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </button>
+                <input
+                  class="mx-2 quantity"
+                  value="1"
+                  id="quantity"
+                  readonly
+                  name="quantity"
+                  min="1"
+                  style="width: 48px; text-align: center"
+                />
+                <button class="actionButton">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="darkgreen"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>Angular</td>
+              <td>29.99</td>
+              <td>29.99</td>
+              <td>
+                <button class="actionButton">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="darkred"
+                    class="bi bi-dash"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"
+                    />
+                  </svg>
+                </button>
+                <input
+                  class="mx-2 quantity"
+                  value="1"
+                  id="quantity"
+                  readonly
+                  name="quantity"
+                  min="1"
+                  style="width: 48px; text-align: center"
+                />
+                <button class="actionButton">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="darkgreen"
+                    class="bi bi-plus"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                    />
+                  </svg>
+                </button>
+              </td>
+            </tr>
+
+            <tr>
+              <td colspan="4" style="text-align: right">
+                Total Price : <span class="mx-5"> 29.99 </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <footer class="placeOrder">
+        <button id="logoutButton" style="width: 120px">Place order</button>
+      </footer>
+    </div>
+  </body>
+</html>

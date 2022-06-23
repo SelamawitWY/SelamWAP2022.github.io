@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  color: lavender;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  background: gray;
+}
+
+#container {
+  border: 2px solid;
+  background-color: lightgray;
+  width: 75vw;
+}
+#logoutButton {
+  width: 84px;
+  height: 40px;
+  border-radius: 16px;
+  background: goldenrod;
+}
+
+h1,
+h2,
+h3 {
+  color: darkslategray;
+}
+
+.myHead {
+  color: darkslategrey;
+  background: goldenrod;
+}
+
+tbody {
+  background: lightslategrey;
+}
+
+.actionButton {
+  width: 40px;
+  background: none;
+  border: none;
+}
+
+.quantity {
+  width: 48px;
+  text-align: center;
+  border-radius: 6px;
+  background: azure;
+}
+
+.placeOrder {
+  padding: 32px;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.home {
+  background: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 32px;
+  font-family: sans-serif;
+}
+
+a:link {
+  color: darkgreen;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: black;
+}
+
+a:focus {
+  color: darkgreen;
+}
+
+a:visited {
+  color: yellowgreen;
+}
+
+a:visited:hover {
+  color: black;
+}
