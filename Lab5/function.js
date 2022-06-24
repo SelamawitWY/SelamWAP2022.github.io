@@ -1,7 +1,7 @@
 
 
  console.log("*****************Function 1: Sum**********************");
-function sum(arr){
+ function sum(arr){
 
     if(Array.isArray(arr)){
         
