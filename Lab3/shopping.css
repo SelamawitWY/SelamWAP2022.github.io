@@ -91,3 +91,8 @@ a:visited {
 a:visited:hover {
   color: black;
 }
+.checkerImg {
+  border: 0;
+  width: 88px;
+  height: 31px;
+}

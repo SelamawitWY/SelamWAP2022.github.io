@@ -1,0 +1,152 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  color: lavender;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 32px;
+  background: gray;
+  padding-top: 0px;
+}
+
+#container {
+  border: 2px solid;
+  background-color: lightgray;
+  width: 90vw;
+}
+#logoutButton {
+  width: 84px;
+  height: 40px;
+  border-radius: 16px;
+  background: goldenrod;
+}
+
+h1,
+h2,
+h3 {
+  color: darkslategray;
+}
+
+.actionButton {
+  width: 40px;
+  background: none;
+  border: none;
+}
+footer {
+  background: gray;
+  display: flex;
+  flex-direction: column;
+}
+
+.placeOrder {
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 0px;
+}
+
+.home {
+  background: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 32px;
+  font-family: sans-serif;
+}
+
+/* #formContainer {
+  padding: 32px;
+} */
+
+#formContainer > p {
+  font-size: 24px;
+  color: darkslategray;
+  padding-left: 32px;
+  padding-top: 32px;
+}
+/* this is for home anchor link */
+a:link {
+  color: darkgreen;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: black;
+}
+
+a:focus {
+  color: darkgreen;
+}
+
+a:visited {
+  color: yellowgreen;
+}
+
+a:visited:hover {
+  color: black;
+}
+
+#formDiv {
+  display: flex;
+  color: darkslategray;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+.inputDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+#inputVal {
+  width: 50%;
+}
+.checkerImg {
+  border: 0;
+  width: 88px;
+  height: 31px;
+}
+
+.requiredFlag {
+  color: darkred;
+  margin-left: 4px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  padding: 12px;
+  width: max-content;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background: darkgoldenrod;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  color: #ffffff;
+}
