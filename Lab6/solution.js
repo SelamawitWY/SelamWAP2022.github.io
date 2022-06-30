@@ -52,3 +52,28 @@ let whileBlockAtExecutionLE2 = {outer: makeArmy, shooter: fn, j:0};
 //3. army0 lexical environment
 let army0AtCreationLE2 = {outer: while_0, arguments:{length:0}};
 let army0AtExecutionLE2 = {outer: while_0, arguments:{length:0}}; //closure = while_0 , j = 0
+
+
+/** Question 2 */
+function printNumbers(from, to){
+    let current = from;
+    
+    let timerId = setInterval( () => {
+    
+      console.log(current);
+    
+      if(current == to){
+        clearInterval(timerId);
+      }
+      
+      current++;
+    }, 1000);
+   
+  }
+  
+  printNumbers(0,8);
+
+
+  /** Question 3 */
+
+  //. After the loop
