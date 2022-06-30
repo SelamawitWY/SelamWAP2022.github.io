@@ -30,8 +30,22 @@ askPassword( () => user.loginOk.apply(user), () => user.loginFail.apply(user));
 
 
 //Question 2: ===========================================================
-
+// ========== option one == bind
 let group = {
+    title: "Our Group",
+    students: ["John", "Pete", "Alice"],
+    showList: function () {
+     this.students.forEach( function(student) {
+				console.log(this.title + ": " + student );
+    	}.bind(this));
+  	}
+  }
+
+ group.showList();
+
+ // ========= option two 
+
+ let group2 = {
     title: "Our Group",
     students: ["John", "Pete", "Alice"],
     showList: function () {
@@ -40,4 +54,32 @@ let group = {
     },
   };
 
-  group.showList();
+  group2.showList();
+
+  // ======== option three
+
+  let group3 = {
+    title: "Our Group",
+    students: ["John", "Pete", "Alice"],
+    showList: function () {
+     this.students.forEach(function(student) {
+				console.log(this.title + ": " + student );
+    	},this);
+  	}
+  }
+
+  group3.showList();
+
+  // ======= option four = call
+  let group4 = {
+    title: "Our Group",
+    students: ["John", "Pete", "Alice"],
+    showList: function () {
+     this.students.forEach( (student) => function() {
+				console.log(this.title + ": " + student );
+    	}.call(this));
+  	}
+  }
+
+  group4.showList();
+

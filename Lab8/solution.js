@@ -61,12 +61,73 @@ console.log(
 /*================== Question two ==========================*/
 let arr= [2,4,3,1];
 
-console.log(arr.constructor === 'Array');
-
 Array.prototype.mySort= function () {
-     	return this.sort();
+      
+      let arr = this;
+      
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+          if (arr[i] > arr[j]) {
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+          }
+        }
+      }
+      
+     	return arr;
 }
 
 console.log(arr.mySort())
 
+/*================== Question three ==========================*/
+//1. === Using object literal
 
+const Linkedlist = {
+    list:[],
+    add: function(item) {
+      this.list.push(item);
+    },
+    remove: function(item){
+      for( var i = 0; i < this.list.length; i++){ 
+          if ( this.list[i] === item) { 
+              this.list.splice(i, 1); 
+          }
+      }
+    },
+    print: function(){
+      console.log(`LinkedList {${this.list}}`);
+    }
+}
+
+let linkedlist1 = Object.create(Linkedlist);
+
+//2. === Using function constructor
+
+function Linkedlist() {
+this.list = [];
+}
+  
+Linkedlist.prototype.add = function(item) {
+    this.list.push(item);
+}
+
+Linkedlist.prototype.remove = function(item){
+    for( var i = 0; i < this.list.length; i++){ 
+        if ( this.list[i] === item) { 
+            this.list.splice(i, 1); 
+        }
+    }
+}
+
+Linkedlist.prototype.print = function(){
+console.log(`LinkedList {${this.list}}`);
+}
+
+let linkedlist = new Linkedlist();
+linkedlist.add(1);
+linkedlist.add(2);
+linkedlist.add(3);
+linkedlist.print(); //Expected Result: LinkedList{1,2,3}; 
+linkedlist.remove(2);
+linkedlist.print(); //Expected Result: LinkedList{1,3};
