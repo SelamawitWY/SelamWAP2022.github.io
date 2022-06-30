@@ -83,45 +83,97 @@ console.log(arr.mySort())
 /*================== Question three ==========================*/
 //1. === Using object literal
 
-const Linkedlist = {
-    list:[],
+const LinkedlistLiteral = {
     add: function(item) {
-      this.list.push(item);
-    },
-    remove: function(item){
-      for( var i = 0; i < this.list.length; i++){ 
-          if ( this.list[i] === item) { 
-              this.list.splice(i, 1); 
-          }
+      if (this.value === undefined) {
+        this.value = item;
+        this.next = null; 
+      } 
+      else {
+        let current = this; 
+        while (current.next) {
+          current = current.next; 
+        }
+
+        current.next = { value: item, next: null }; 
       }
     },
-    print: function(){
-      console.log(`LinkedList {${this.list}}`);
-    }
+    print : function() {
+        let values = [];
+        list = this;
+
+        while(list.next){
+          values.push(list.value);
+          list = list.next ;
+        }
+
+        values.push(list.value);
+        console.log(`LinkedList {${values}}`);
+      },
+    remove: function(item){
+      let list = this;
+      let prevItem = null;
+
+      while(list.next){
+        if(list.value == item){
+            let itemToRemove = list;
+            prevItem.next = itemToRemove.next;
+            itemToRemove.next = null;
+            break;
+          }
+        prevItem = list;
+        list =  list.next;
+      }
+      }
 }
 
-let linkedlist1 = Object.create(Linkedlist);
+let linkedlistLiteral = Object.create(LinkedlistLiteral);
 
 //2. === Using function constructor
 
 function Linkedlist() {
-this.list = [];
 }
-  
+
 Linkedlist.prototype.add = function(item) {
-    this.list.push(item);
+  if (this.value === undefined) {
+    this.value = item;
+    this.next = null; 
+  } 
+  else {
+    let current = this; 
+    while (current.next) {
+      current = current.next; 
+    }
+
+    current.next = { value: item, next: null }; 
+  }
+}
+
+Linkedlist.prototype.print  = function() {
+    let values = [];
+    list = this;
+
+    while(list.next){
+      values.push(list.value);
+      list = list.next ;
+    }
+
+    values.push(list.value);
+    console.log(`LinkedList {${values}}`);
 }
 
 Linkedlist.prototype.remove = function(item){
-    for( var i = 0; i < this.list.length; i++){ 
-        if ( this.list[i] === item) { 
-            this.list.splice(i, 1); 
-        }
-    }
-}
+  let list = this;
+  let prevItem = null;
 
-Linkedlist.prototype.print = function(){
-console.log(`LinkedList {${this.list}}`);
+  while(list){
+    if(list.value == item){
+        let itemToRemove = list;
+        prevItem.next = itemToRemove.next;
+      }
+    prevItem = list;
+    list =  list.next;
+  }
 }
 
 let linkedlist = new Linkedlist();

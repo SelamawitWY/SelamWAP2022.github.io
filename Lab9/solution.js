@@ -1,20 +1,44 @@
 /* =============   Question 1: using class ===================== */
 class LinkedList {
+  add(item) {
+    if (this.value === undefined) {
+      this.value = item;
+      this.next = null; 
+    } 
+    else {
+      let current = this; 
+      while (current.next) {
+        current = current.next; 
+      }
 
-  list = [];
-  add(item){
-    this.list.push(item);
-   }
-  remove (item){
-     for( var i = 0; i < this.list.length; i++){ 
-         if ( this.list[i] === item) { 
-             this.list.splice(i, 1); 
-         }
+      current.next = { value: item, next: null }; 
+    }
+  }
+  print () {
+      let values = [];
+      let list = this;
+
+      while(list){
+        values.push(list.value);
+        list = list.next ;
+      }
+
+      console.log(`LinkedList {${values}}`);
+    }
+
+  remove(item){
+    var list = this;
+    let prevItem = null;
+
+    while(list){
+      if(list.value == item){
+          let itemToRemove = list;
+          prevItem.next = itemToRemove.next;
+        }
+      prevItem = list;
+      list =  list.next;
      }
-   }
-   print (){
-     console.log(`LinkedList {${this.list}}`);
-   }
+    }
 }
 
 let linkedlist = new LinkedList();
@@ -22,7 +46,7 @@ linkedlist.add(1);
 linkedlist.add(2);
 linkedlist.add(3);
 linkedlist.print(); //in the console, you should see: LinkedList{1,2,3} 
-linkedlist.remove(3);
+linkedlist.remove(2);
 linkedlist.print(); //in the console, you should see: LinkedList{1,3}
 
 /* =============   Question 2 : Quiz System ===================== */
@@ -58,21 +82,20 @@ class Quiz {
   }
 
   scoreStudentBySid(sid){
-    let score = 0;
-    let answers = {};
+    let answers = null;
+    
     this.students.forEach((stud) => {
       if(stud.studentId == sid){
         answers = stud.answers;
       }
-    })
+    });
 
-    this.questions.forEach((question) => {
+    return this.questions.reduce((score, question ,i , arr ) => {
       if(answers.get(question.qid) == question.answer) {
          score++;
       }
-    });
-
-    return score;
+      return score;
+    },0);
   }
 
   getAverageScore() {
