@@ -52,14 +52,15 @@ linkedlist.print(); //in the console, you should see: LinkedList{1,3}
 /* =============   Question 2 : Quiz System ===================== */
 
 class Student {
-  answers = new Map();
-  
+  //answers = new Map();
   constructor(id){
     this.studentId = id;
+    this.answers = [];
   }
 
   addAnswer(question){
-    this.answers.set(question.qid, question.answer);
+    // this.answers.set(question.qid, question.answer);
+    this.answers.push(question);
   }
 }
 
@@ -77,7 +78,8 @@ class Question {
 
 class Quiz {
   constructor(questions, students){
-    this.questions = questions;
+    this.questions = new Map();
+    questions.forEach((q) => this.questions.set(q.qid,  q.answer));
     this.students = students;
   }
 
@@ -90,8 +92,8 @@ class Quiz {
       }
     });
 
-    return this.questions.reduce((score, question ,i , arr ) => {
-      if(answers.get(question.qid) == question.answer) {
+    return answers.reduce((score, question ,i , arr ) => {
+      if(question.checkAnswer(this.questions.get(question.qid))) {
          score++;
       }
       return score;
@@ -112,7 +114,6 @@ student1.addAnswer(new Question(2, 'a'));
 student1.addAnswer(new Question(3, 'b'));
 student1.addAnswer(new Question(1, 'b'));
 
-//console.log(student1);
 const student2 = new Student(11);
 student2.addAnswer(new Question(3, 'b'));
 student2.addAnswer(new Question(2, 'a'));
