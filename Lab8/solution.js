@@ -102,12 +102,11 @@ const LinkedlistLiteral = {
         let values = [];
         list = this;
 
-        while(list.next){
+        while(list){
           values.push(list.value);
           list = list.next ;
         }
 
-        values.push(list.value);
         console.log(`LinkedList {${values}}`);
       },
     remove: function(item){
@@ -118,16 +117,15 @@ const LinkedlistLiteral = {
         if(list.value == item){
             let itemToRemove = list;
             prevItem.next = itemToRemove.next;
-            itemToRemove.next = null;
-            break;
           }
+
         prevItem = list;
         list =  list.next;
       }
       }
 }
 
-let linkedlistLiteral = Object.create(LinkedlistLiteral);
+let linkedlist = Object.create(LinkedlistLiteral);
 
 //2. === Using function constructor
 
@@ -141,6 +139,7 @@ Linkedlist.prototype.add = function(item) {
   } 
   else {
     let current = this; 
+
     while (current.next) {
       current = current.next; 
     }
@@ -153,12 +152,11 @@ Linkedlist.prototype.print  = function() {
     let values = [];
     list = this;
 
-    while(list.next){
+    while(list){
       values.push(list.value);
       list = list.next ;
     }
 
-    values.push(list.value);
     console.log(`LinkedList {${values}}`);
 }
 
@@ -176,7 +174,7 @@ Linkedlist.prototype.remove = function(item){
   }
 }
 
-let linkedlist = new Linkedlist();
+// let linkedlist = new Linkedlist();
 linkedlist.add(1);
 linkedlist.add(2);
 linkedlist.add(3);
