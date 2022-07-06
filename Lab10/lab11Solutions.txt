@@ -1,0 +1,33 @@
+/* Write the necessary Node script to make this code work for all arrays: */
+Array.prototype.even = function(){
+    let arr = this;
+    return arr.filter((elem,i,arr) => elem % 2 == 0);
+}
+
+Array.prototype.odd = function(){
+    let arr = this;
+    return arr.filter((elem,i,arr) => elem % 2 != 0);
+}
+var arrInt = [1,2,3,4,5,6,7,8];
+
+console.log(arrInt.even());
+console.log(arrInt.odd());
+ 
+
+// Question 2
+// 1.Explain why do we want sometimes to use setImmediate instead of using setTimeout?
+// The main advantage to using setImmediate() over setTimeout() is setImmediate() will always be executed before any timers if 
+// scheduled within an I/O cycle, independently of how many timers are present.
+// the order of call is nondeterministic UNLESS they are scheduled within an I/O cycle
+// When we want to execute some action on the next step of event loop
+// setImmediate has a higher priority than setTimeout when it is running in an I/O cycle.
+//  Since you are running this code outside of an I/O cycle, the order of executon is NOT guaranteed and the system can execute any callback
+// 2. Explain the difference between process.nextTick and setImmediate
+// setImmediate - runs after I/O event callbacks at 'check' phase of the event loop
+// process.nextTick - runs immediately after the current callback in event loop iteration.
+
+// process.nextTick is not techinacslly part of the event loop, doesnt care about the phase of event loop. call backs registed in process.nextTick 
+// will run after the current pahse of the eventlopp before continuing to the next phase. it doesnit wait for theentire pahse of event loop
+
+// 3. Does Node.js has window object?
+// No, it has window like object called globalThis.

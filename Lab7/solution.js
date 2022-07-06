@@ -35,9 +35,11 @@ let group = {
     title: "Our Group",
     students: ["John", "Pete", "Alice"],
     showList: function () {
-     this.students.forEach( function(student) {
-				console.log(this.title + ": " + student );
-    	}.bind(this));
+     this.students.forEach( 
+        function(student) {
+          console.log(this.title + ": " + student );
+        }.bind(this)
+      );
   	}
   }
 
@@ -62,7 +64,8 @@ let group = {
     title: "Our Group",
     students: ["John", "Pete", "Alice"],
     showList: function () {
-     this.students.forEach(function(student) {
+      this.students.forEach(
+        function(student) {
 				console.log(this.title + ": " + student );
     	},this);
   	}
@@ -75,7 +78,8 @@ let group = {
     title: "Our Group",
     students: ["John", "Pete", "Alice"],
     showList: function () {
-     this.students.forEach( (student) => function() {
+     this.students.forEach( 
+      (student) => function() {
 				console.log(this.title + ": " + student );
     	}.call(this));
   	}

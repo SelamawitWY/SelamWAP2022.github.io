@@ -1,0 +1,10 @@
+1. Explain why do we want sometimes to use setImmediate instead of using setTimeout?
+   The main advantage to using setImmediate() over setTimeout() is setImmediate() will always be executed before any timers if 
+   scheduled within an I/O cycle, independently of how many timers are present.
+
+2. Explain the difference between process.nextTick and setImmediate
+   setImmediate - runs after I/O event callbacks at 'check' phase of the event loop
+   process.nextTick - runs immediately after the current pahse of the eventlopp before continuing to the next phase
+   
+3. Does Node.js has window object?
+   No, it has window like object called globalThis.
