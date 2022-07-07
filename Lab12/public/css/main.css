@@ -1,0 +1,89 @@
+body {
+  font-family: sans-serif;
+  border: 2px solid;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  border: 1px solid darkslategray;
+  text-align: center;
+  background: lightslategray;
+  padding: 6px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+h1,
+h2 {
+  color: darkslategray;
+}
+
+#radio {
+  display: block;
+  margin-left: 12px;
+}
+
+#container {
+  width: 100%;
+  background: lightgray;
+}
+
+#myProduct {
+  padding: 16px;
+}
+
+#inputGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+#productDiv {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin: 0px;
+  margin-bottom: 6px;
+}
+hr {
+  padding: 2px;
+  background: goldenrod;
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 100%;
+}
+button {
+  height: 48px;
+  border-radius: 46px;
+}
+
+button:hover {
+  background: goldenrod;
+}
+
+legend {
+  width: 40%;
+  margin-bottom: 6px;
+}
+
+#search {
+  border-radius: 16px;
+  width: 60%;
+  padding-left: 16px;
+}
+
+img {
+  width: 50vw;
+  height: 50vh;
+}

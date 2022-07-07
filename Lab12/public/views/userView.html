@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User page</title>
+    <link href="/cssFiles/main.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>User list</h1>
+        <form
+          action="/users/filter"
+          method="post"
+          style="flex-direction: row; justify-content: space-between"
+        >
+          <input
+            id="search"
+            type="text"
+            name="search"
+            placeholder="Search by first name"
+            autocomplete="off"
+          />
+          <button class="mt-5" type="submit" style="width: 30%">Search</button>
+        </form>
+      </header>
+
+      <div id="myProduct" class="body-content">
+        <% users.forEach(function(user) { %>
+        <div id="productDiv">
+          <h3>
+            <label> First Name </label> :
+            <span class="ml-3"><%= user.name %></span>
+          </h3>
+          <h3>
+            <label> Last Name </label> :
+            <span class="ml-3"><%= user.lname %></span>
+          </h3>
+          <h3>
+            <label> Job Title </label> :
+            <span class="ml-3"><%= user.title %></span>
+          </h3>
+          <hr />
+        </div>
+        <% }); %>
+      </div>
+    </div>
+  </body>
+</html>
