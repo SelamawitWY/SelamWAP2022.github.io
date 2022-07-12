@@ -40,13 +40,4 @@ module.exports = class Product {
       throw new Error("Product not Found");
     }
   }
-
-  static findById(productId) {
-    const index = db.findIndex((p) => p.id === productId);
-    if (index > -1) {
-      return products[index];
-    } else {
-      throw new Error("NOT Found");
-    }
-  }
 };

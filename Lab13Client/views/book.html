@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href="../css/main.css" type="text/css" rel="stylesheet" />
+    <script src="../index.js" type="text/javascript"></script>
+
+    <title>Css for layout</title>
+  </head>
+  <body>
+    <div id="container">
+      <div class="home pt-3"></div>
+      <header>
+        <img src="../asset/logo.png" width="50px" alt="logo" />
+        <h1>Welcome</h1>
+        <button class="logoutButton">Logout</button>
+      </header>
+      <section style="padding: 32px">
+        <h2 class="mb-4" id="headerTitie">Add Book</h2>
+        <div>
+          <div id="inputGroup">
+            <legend>Title</legend>
+            <input type="text" name="title" id="title" />
+          </div>
+          <div id="inputGroup">
+            <legend>ISBN</legend>
+            <input type="text" name="isbn" id="isbn" />
+          </div>
+          <div id="inputGroup">
+            <legend>published Date</legend>
+            <input type="text" name="publishedDate" id="publishedDate" />
+          </div>
+          <div id="inputGroup">
+            <legend>Author</legend>
+            <input type="text" name="author" id="author" />
+          </div>
+          <button class="logoutButton" id="submitBtn">Add</button>
+        </div>
+        <hr />
+      </section>
+
+      <section style="padding: 32px">
+        <h2 class="mb-4">Book list</h2>
+        <table
+          class="table table-bordered"
+          style="margin-top: 6px; color: lavender; text-align: center"
+        >
+          <thead class="myHead">
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">ISBN</th>
+              <th scope="col">Published date</th>
+              <th scope="col">Author</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="content"></tbody>
+        </table>
+      </section>
+    </div>
+  </body>
+</html>
