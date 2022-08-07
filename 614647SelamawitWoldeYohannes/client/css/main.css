@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  color: lavender;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 32px;
+  background: gray;
+}
+
+#container {
+  border: 2px solid;
+  background-color: lightgray;
+  width: 75vw;
+}
+.logoutButton {
+  width: 84px;
+  height: 40px;
+  border-radius: 16px;
+  background: #fe5621;
+  color: white;
+}
+
+#submitBtn {
+  position: relative;
+}
+h1,
+h2,
+h3 {
+  color: darkslategray;
+}
+#errorMessage {
+  color: darkred;
+  font-size: 16px;
+  margin: auto;
+  margin-top: -12px;
+}
+
+#serverError {
+  border: 1px solid;
+  padding: 6px;
+  color: darkred;
+}
+.myHead {
+  color: darkslategrey;
+  color: white;
+  background: #fe5621;
+}
+
+tbody {
+  background: gray;
+}
+
+.updateButton,
+.deleteButton {
+  background: none;
+  border: none;
+}
+
+.quantity {
+  width: 48px;
+  text-align: center;
+  border-radius: 6px;
+  background: azure;
+}
+
+.placeOrder {
+  padding: 32px;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.home {
+  background: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 32px;
+  font-family: sans-serif;
+}
+
+a:link {
+  color: darkgreen;
+  text-decoration: underline;
+}
+
+.checkerImg {
+  border: 0;
+  width: 88px;
+  height: 31px;
+}
+
+legend {
+  width: 62%;
+  margin-bottom: 6px;
+  color: darkslategray;
+  font-size: 20px;
+}
+input[type="text"] {
+  width: 100%;
+}
+#inputGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+#logoutDiv {
+  width: 60%;
+  justify-content: space-between;
+}
